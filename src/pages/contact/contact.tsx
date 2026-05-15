@@ -62,9 +62,8 @@ const ContactMain = () => {
               <ContactTwo/>
               {/* contact area */}
 
-              {/* contact location */}
-              <ContactLocation/>
-              {/* contact location */}
+              {/* contact location — hidden: single-location solo practice */}
+              {/* <ContactLocation/> */}
             </main>
 
             {/* footer area */}

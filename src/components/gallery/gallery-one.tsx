@@ -1,23 +1,40 @@
 import React, { CSSProperties } from 'react';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
-// images
+// shapes (keep existing decorative shapes)
 import shape_1 from '@/assets/img/home-03/gallery/gal-shape-1.png';
 import shape_d_1 from '@/assets/img/home-03/gallery/gal-shape-dark-1.png';
 import shape_2 from '@/assets/img/home-03/gallery/gal-shape-2.png';
 import shape_d_2 from '@/assets/img/home-03/gallery/gal-shape-dark-2.png';
-import g_1 from '@/assets/img/home-03/gallery/gal-1.jpg';
-import g_2 from '@/assets/img/home-03/gallery/gal-2.jpg';
-import g_3 from '@/assets/img/home-03/gallery/gal-3.jpg';
-import g_4 from '@/assets/img/home-03/gallery/gal-4.jpg';
-import g_5 from '@/assets/img/home-03/gallery/gal-5.jpg';
 
+/**
+ * Gallery marquee — images pulled from active project hero/thumbnails.
+ * Replace each "PENDING" src with the real Contentful/CDN URL when available.
+ * The marquee auto-loops so add as many as needed.
+ */
+const GALLERY_IMAGES: { src: string; label: string }[] = [
+  { src: "PENDING", label: "Paradise" },
+  { src: "PENDING", label: "Kimya Glasgow Sustainability" },
+  { src: "PENDING", label: "Botanical" },
+  { src: "PENDING", label: "The Reef Brand" },
+  { src: "PENDING", label: "Lots of Lobster" },
+  { src: "PENDING", label: "Mutiny on the Reef" },
+];
 
-const gallery_images = [
-  g_1, g_2, g_3, g_4, g_5, g_3, g_1, g_2, g_3, g_4, g_5, g_3
-]
+// Duplicate for a full seamless loop
+const looped = [...GALLERY_IMAGES, ...GALLERY_IMAGES];
 
-const imgStyle:CSSProperties = {height: "auto"};
+const imgStyle: CSSProperties = { height: 'auto', width: '100%', objectFit: 'cover' };
+
+const placeholderStyle: CSSProperties = {
+  width: '280px',
+  height: '200px',
+  background: '#111',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexShrink: 0,
+};
 
 export default function GalleryOne() {
   return (
@@ -35,17 +52,29 @@ export default function GalleryOne() {
           <div className="col-xl-12">
             <div className="tp-gallery-slider-wrap">
               <div className="swiper-container tp-gallery-slider-active">
-                <Marquee className="tp-gallery-titming" speed={100} direction='left'>
-
-                  {gallery_images.map((g, i) => (
-
+                <Marquee className="tp-gallery-titming" speed={80} direction="left">
+                  {looped.map((item, i) => (
                     <div key={i}>
                       <div className="tp-gallery-item mr-30">
-                        <Image src={g} alt="gallery-img" style={{ height: 'auto' }} />
+                        {item.src !== "PENDING" ? (
+                          <Image
+                            src={item.src}
+                            alt={item.label}
+                            width={280}
+                            height={200}
+                            style={{ objectFit: 'cover', height: 'auto' }}
+                          />
+                        ) : (
+                          // Placeholder until real media is uploaded to Contentful
+                          <div style={placeholderStyle}>
+                            <span style={{ opacity: 0.25, fontSize: '0.7rem', textAlign: 'center', padding: '0 1rem' }}>
+                              {item.label}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   ))}
-
                 </Marquee>
               </div>
             </div>
@@ -53,5 +82,5 @@ export default function GalleryOne() {
         </div>
       </div>
     </div>
-  )
+  );
 }

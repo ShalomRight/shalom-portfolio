@@ -2,11 +2,63 @@ import React from "react";
 import Image from "next/image";
 import { Hand } from "../svg";
 
-// images
+// decorative shape — unchanged
 import shape from "@/assets/img/inner-about/about/shape-1.png";
-import ab_1 from "@/assets/img/inner-about/about/about-1.jpg";
-import ab_2 from "@/assets/img/inner-about/about/about-3.jpg";
-import ab_3 from "@/assets/img/inner-about/about/about-2.jpg";
+
+/**
+ * About page image panel — three project hero shots.
+ * Replace each src with the real Contentful/CDN URL when media is uploaded.
+ * ab_1 → Paradise (left, large)
+ * ab_2 → Mutiny on the Reef (right, top overlay)
+ * ab_3 → Botanical (right, bottom)
+ *
+ * Fallback: renders a dark placeholder tile until real URLs land.
+ */
+const PROJECT_IMAGES = {
+  ab_1: { src: "PENDING", alt: "Paradise — fragrance launch film" },
+  ab_2: { src: "PENDING", alt: "Mutiny on the Reef — campaign" },
+  ab_3: { src: "PENDING", alt: "Botanical — 3D product visuals" },
+};
+
+const placeholderStyle: React.CSSProperties = {
+  width: "100%",
+  aspectRatio: "4/3",
+  background: "#111",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
+
+function ProjectImage({ entry, className, dataSpeed }: {
+  entry: { src: string; alt: string };
+  className?: string;
+  dataSpeed?: string;
+}) {
+  if (entry.src !== "PENDING") {
+    return (
+      <Image
+        data-speed={dataSpeed}
+        className={className}
+        src={entry.src}
+        alt={entry.alt}
+        width={800}
+        height={600}
+        style={{ height: "auto", width: "100%" }}
+      />
+    );
+  }
+  return (
+    <div
+      data-speed={dataSpeed}
+      className={className}
+      style={placeholderStyle}
+    >
+      <span style={{ opacity: 0.2, fontSize: "0.7rem", textAlign: "center", padding: "0 1rem" }}>
+        {entry.alt}
+      </span>
+    </div>
+  );
+}
 
 export default function AboutUsArea() {
   return (
@@ -16,29 +68,17 @@ export default function AboutUsArea() {
           <div className="row align-items-end">
             <div className="col-xl-6 col-lg-6 col-md-6">
               <div className="ab-about-left-thumb">
-                <Image
-                  data-speed=".7"
-                  src={ab_1}
-                  alt="about-img"
-                  style={{ height: "auto" }}
-                />
+                <ProjectImage entry={PROJECT_IMAGES.ab_1} dataSpeed=".7" />
               </div>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6">
               <div className="ab-about-right-thumb p-relative">
-                <Image
-                  data-speed="1.1"
+                <ProjectImage
+                  entry={PROJECT_IMAGES.ab_2}
+                  dataSpeed="1.1"
                   className="inner-img z-index-5"
-                  src={ab_2}
-                  alt="about-img"
-                  style={{ height: "auto" }}
                 />
-                <Image
-                  data-speed="0.9"
-                  src={ab_3}
-                  alt="about-img"
-                  style={{ height: "auto" }}
-                />
+                <ProjectImage entry={PROJECT_IMAGES.ab_3} dataSpeed="0.9" />
               </div>
             </div>
           </div>
@@ -51,10 +91,12 @@ export default function AboutUsArea() {
                 Hi!
               </span>
               <p className="tp-dropcap tp_fade_bottom">
-                We are a creative studio that specializes in providing
-                high-quality design and branding solutions to businesses and
-                individuals. Our team is composed of talented designers,
-                developers, and marketers.!
+                I&apos;m a multidisciplinary designer and motion creative with 10+
+                years of experience across branding, motion graphics, digital
+                marketing, and frontend. I&apos;ve worked with fashion labels,
+                hospitality brands, broadcast studios, and event producers
+                across the Caribbean — combining creative direction with
+                technical execution to produce visual systems that move.
               </p>
             </div>
           </div>
@@ -80,21 +122,21 @@ export default function AboutUsArea() {
                   <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
                     <div className="ab-about-category-list category-space-1 tp_fade_bottom">
                       <ul>
-                        <li>Art direction</li>
-                        <li>Branding</li>
-                        <li>Content Production</li>
-                        <li>User Interface Design</li>
-                        <li>Animation</li>
+                        <li>Motion Graphics</li>
+                        <li>Brand Identity</li>
+                        <li>Creative Direction</li>
+                        <li>Video Production</li>
+                        <li>Event Branding</li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
                     <div className="ab-about-category-list category-space-2 tp_fade_bottom">
                       <ul>
-                        <li>Brand Identity</li>
-                        <li>User Interface</li>
-                        <li>User Experience</li>
-                        <li>Responsive Design</li>
+                        <li>UI / UX Design</li>
+                        <li>Frontend Development</li>
+                        <li>Social Media Design</li>
+                        <li>Product Visualization</li>
                       </ul>
                     </div>
                   </div>

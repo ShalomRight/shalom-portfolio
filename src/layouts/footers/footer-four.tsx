@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-import logo from '@/assets/img/logo/logo-white.png';
 import { RightArrow, SvgBgSm } from '@/components/svg';
 import Link from 'next/link';
 
@@ -43,11 +41,11 @@ export default function FooterFour() {
               <div className="tp-footer-3-widget text-md-center footer-col-3-2">
                 <div className="tp-footer-3-logo-box">
                   <p className="mb-100">
-                    Drop us a line sed id semper <br />
-                    risus in hend rerit.
+                    Motion, brand, and digital —{" "}<br />
+                    based in Saint Vincent.
                   </p>
-                  <Link className="tp-footer-3-logo p-relative" href="/">
-                    <Image src={logo} alt="logo" />
+                  <Link className="tp-footer-3-logo p-relative tp-header-brand-name" href="/">
+                    Shalom.js
                   </Link>
                   <p className="tp-footer-3-copyright">
                     {new Date().getFullYear()} Shalom Sutherland <br /> © All rights reserved
@@ -69,10 +67,10 @@ export default function FooterFour() {
                 <div className="tp-footer-3-widget">
                   <h4 className="tp-footer-3-title">Follow</h4>
                   <div className="tp-footer-3-social">
-                    <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
+                    {/* TODO: add real profile URLs */}
                     <a href="#"><i className="fa-brands fa-instagram"></i></a>
                     <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i className="fa-brands fa-behance"></i></a>
                   </div>
                 </div>
               </div>

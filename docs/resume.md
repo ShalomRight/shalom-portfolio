@@ -58,7 +58,7 @@ Selected Work
 
 - Led creative direction and post-production for the Paradise fragrance launch by Kimia Glasgow, producing campaign videos, interviews, and motion graphics.
 - Managed digital marketing and visual content production for the Kimia Glasgow fashion brand across multiple campaigns and product launches.
-- Developed branding and promotional assets for Mutiny on the Reef and Lots of Lobster events in Bequia.
+- Developed branding and promotional assets for events in Bequia Mutiny on the Reef , Lots of Lobster ( an yearly lobster festival ).
 - Produced visual campaigns and supporting promotional material for local events, including Bequia Easter and carnival-related initiatives.
 - Designed logos, menus, and identity systems for hospitality and lifestyle brands.
 - Integrated modern generative workflows into content production to accelerate concept development, visual exploration, and promotional asset creation.

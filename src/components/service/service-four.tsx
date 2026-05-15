@@ -7,21 +7,21 @@ import icon from '@/assets/img/home-03/service/sv-icon-1.png';
 const service_data = [
   {
     id: 1,
-    title: "Product design",
-    desc: "Once we have an idea of your needs, a research and design process begins to gain deep knowledge about the business, users <br> and world context.",
-    category: ["Research", "Ui/ UX", "Prototyping"],
+    title: "Motion Design",
+    desc: "From title sequences to full campaign films — I concept, direct, and deliver motion work across After Effects, DaVinci Resolve, and Cinema 4D. <br /> Every frame is intentional.",
+    category: ["After Effects", "DaVinci Resolve", "Cinema 4D"],
   },
   {
     id: 2,
-    title: "Web/Mobile",
-    desc: "Once we have an idea of your needs, a research and design process begins to gain deep knowledge about the business, users <br> and world context.",
-    category: ["SEO", "Creative Development", "Varcel"],
+    title: "Brand Identity",
+    desc: "Logo systems, visual language, and print collateral built to last. I work from strategy through execution — delivering marks that feel native to the brand, not borrowed from a trend.",
+    category: ["Logo Design", "Visual Systems", "Print & Digital"],
   },
   {
     id: 3,
-    title: "Consulting",
-    desc: "Once we have an idea of your needs, a research and design process begins to gain deep knowledge about the business, users <br> and world context.",
-    category: ["Creative", "Digital strategy", "MVP"],
+    title: "Web & UI",
+    desc: "Responsive web experiences and UI design grounded in craft. From Figma concepts to shipped React frontends — I design and build.",
+    category: ["React", "Frontend Dev", "Responsive Design"],
   },
 ];
 export default function ServiceFour() {

@@ -18,17 +18,17 @@ export default function AboutThree() {
                   <FirstBracket />
                 </span>
                 <span className="tp-subtitle-text tp_text_invert">
-                  What we do
+                  What I do
                 </span>
                 <span>
                   <FirstBracketTwo />
                 </span>
               </span>
               <h4 className="tp-section-title-90 tp_text_invert tp_fade_bottom">
-                We tell visual stories through smooth motions{" "}
+                I tell visual stories through motion{" "}
                 <span>
                   {" "}
-                  <br />& fluid Website
+                  <br />&amp; intentional design
                 </span>
               </h4>
             </div>
@@ -43,15 +43,17 @@ export default function AboutThree() {
           <div className="col-xl-6 col-lg-6 col-md-8">
             <div className="tp-about-3-content">
               <p className="mb-30 tp_fade_bottom">
-                We are a creative design studio based in London. We specialize
-                in Branding, and Web experiences for beauty.
+                Multidisciplinary creative based in Saint Vincent and the
+                Grenadines. I work across brand identity, motion graphics,
+                UI/UX, and frontend — from first concept to shipped product.
               </p>
               <p className="mb-45 tp_fade_bottom">
-                we’re all about digital experiences. The most creative idea and
-                the most perfect execution mean nothing.
+                Over a decade across fashion, hospitality, broadcast, and
+                software. I combine creative direction with technical execution
+                to produce work that moves.
               </p>
-              <Link className="tp-btn-black-2 tp_fade_bottom" href="/about-us">
-                About Us
+              <Link className="tp-btn-black-2 tp_fade_bottom" href="/about-me">
+                About Me
                 <span className="p-relative">
                   <RightArrowTwo />
                   <ArrowBg />

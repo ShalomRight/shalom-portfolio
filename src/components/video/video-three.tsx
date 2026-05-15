@@ -13,7 +13,7 @@ export default function VideoThree() {
           playsInline={true}
         >
           <source
-            src="https://html.hixstudio.net/videos/liko/liko-3.mp4"
+            src="https://videos.ctfassets.net/d1rzkrhwv5ps/3WYZR1fLynxW2DQczCU7Vr/5dbfee8b06d5f3f2a30179905d13b945/RIGHT_STUFF_-_HAPPY_INDEPENDENCE_46_-_2025.mp4"
             type="video/mp4"
           />
         </video>
