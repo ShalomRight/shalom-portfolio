@@ -25,10 +25,7 @@ const HeaderOne = () => {
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-2 col-6">
                 <div className="tp-header-logo">
-                  <Link className="logo-1 tp-header-brand-name" href="/" style={{color: 'var(--tp-common-black)'}}>
-                    Shalom.js
-                  </Link>
-                  <Link className="logo-2 tp-header-brand-name" href="/">
+                  <Link className="tp-header-brand-name" href="/" style={{color: 'var(--tp-common-black)'}}>
                     Shalom.js
                   </Link>
                 </div>
