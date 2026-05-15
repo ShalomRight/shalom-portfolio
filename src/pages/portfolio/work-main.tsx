@@ -26,17 +26,9 @@ const CATEGORIES: { label: string; value: ProjectCategory | "all" }[] = [
 type Props = { projects: PortfolioProject[] };
 
 const WorkMain = ({ projects }: Props) => {
-  // Guard: this file lives in /pages/ so Next.js tries to prerender it as a
-  // standalone route. When rendered without props, bail out gracefully.
-  if (!projects) return null;
   useScrollSmooth();
   const containerRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState<ProjectCategory | "all">("all");
-
-  const visible = projects.filter((p) => {
-    if (active === "all") return true;
-    return (p.category as string[]).includes(active);
-  });
 
   // ── Initial hero animations (run once on mount) ──────────────────
   // scope: containerRef ensures selectors only match inside this component.
@@ -70,6 +62,15 @@ const WorkMain = ({ projects }: Props) => {
     },
     []
   );
+
+  // Guard: this file lives in /pages/ so Next.js tries to prerender it as a
+  // standalone route. When rendered without props, bail out gracefully.
+  if (!projects) return null;
+
+  const visible = projects.filter((p) => {
+    if (active === "all") return true;
+    return (p.category as string[]).includes(active);
+  });
 
   return (
     <Wrapper>

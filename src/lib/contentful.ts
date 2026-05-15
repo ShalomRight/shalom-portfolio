@@ -333,27 +333,32 @@ export async function getGalleryPage(
 ): Promise<GalleryPage | null> {
   // ── Contentful path ────────────────────────────────────────
   if (contentfulClient) {
-    // Try fetching a "galleryPage" content type keyed by pageType id
-    const pageRes = await contentfulClient.getEntries({
-      content_type:  "galleryPage",
-      "fields.id":   pageType,
-      limit:         1,
-      include:       2,   // resolve linked gallery items
-    } as any);
+    try {
+      // Try fetching a "galleryPage" content type keyed by pageType id
+      const pageRes = await contentfulClient.getEntries({
+        content_type:  "galleryPage",
+        "fields.id":   pageType,
+        limit:         1,
+        include:       2,   // resolve linked gallery items
+      } as any);
 
-    if (pageRes.items.length) {
-      const pf = pageRes.items[0].fields as {
-        title?: string;
-        subtitle?: string;
-        items?: Entry<EntrySkeletonType>[];
-      };
-      const items = (pf.items ?? []).map(mapGalleryItemEntry).filter(Boolean) as GalleryItem[];
-      return {
-        id:       pageType,
-        title:    pf.title ?? pageType,
-        subtitle: pf.subtitle,
-        items,
-      };
+      if (pageRes.items.length) {
+        const pf = pageRes.items[0].fields as {
+          title?: string;
+          subtitle?: string;
+          items?: Entry<EntrySkeletonType>[];
+        };
+        const items = (pf.items ?? []).map(mapGalleryItemEntry).filter(Boolean) as GalleryItem[];
+        return {
+          id:       pageType,
+          title:    pf.title ?? pageType,
+          subtitle: pf.subtitle,
+          items,
+        };
+      }
+    } catch (err: any) {
+      // If content type doesn't exist yet or other fetch error, just fallback to local data.
+      console.warn(`[contentful] Failed to fetch galleryPage '${pageType}':`, err?.message || err);
     }
   }
 

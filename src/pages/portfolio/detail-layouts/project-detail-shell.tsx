@@ -29,9 +29,6 @@ type Props = {
 
 /** Shared scroll/GSAP shell used by all detail layout variants */
 export default function ProjectDetailShell({ project, children, pinSelector }: Props) {
-  // Guard: this file lives in /pages/ so Next.js tries to prerender it as a
-  // standalone route. When rendered without props, bail out gracefully.
-  if (!project) return null;
   useScrollSmooth();
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -54,6 +51,10 @@ export default function ProjectDetailShell({ project, children, pinSelector }: P
     },
     { scope: containerRef, dependencies: [] }
   );
+
+  // Guard: this file lives in /pages/ so Next.js tries to prerender it as a
+  // standalone route. When rendered without props, bail out gracefully.
+  if (!project) return null;
 
   return (
     <Wrapper>
