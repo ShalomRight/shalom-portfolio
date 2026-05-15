@@ -20,8 +20,8 @@ export default function HeroBannerFour() {
               <span className="tp-hero-3-category tp_reveal_anim">
                 motion design / brand identity / ui/ux / frontend
               </span>
-              <Link className="tp-btn-black-2" href="/contact">
-                Say Hello{" "}
+              <Link className="tp-btn-black-2" href="/work">
+                See my work{" "}
                 <span className="p-relative">
                   <RightArrowTwo />
                   <ArrowBg />
