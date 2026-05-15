@@ -76,10 +76,9 @@ export default function ProjectFour({ style_2 = false }: IProps) {
                       <Image
                         src={item.img_1}
                         alt={item.title}
-                        width={0}
-                        height={0}
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        style={{ width: "100%", height: "auto" }}
+                        width={570}
+                        height={720}
+                        style={{ objectFit: "cover", display: "block", width: "100%" }}
                       />
                     </div>
                   </div>
@@ -105,10 +104,9 @@ export default function ProjectFour({ style_2 = false }: IProps) {
                       <Image
                         src={item.img_2}
                         alt={`${item.title} — thumbnail`}
-                        width={0}
-                        height={0}
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        style={{ width: "100%", height: "auto" }}
+                        width={570}
+                        height={720}
+                        style={{ objectFit: "cover", display: "block", width: "100%" }}
                       />
                     </div>
                   </div>
