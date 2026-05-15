@@ -9,20 +9,20 @@ import s_3 from "@/assets/img/home-01/service/service-icon-3.png";
 const service_data = [
   {
     id: 1,
-    title: "Branding",
-    desc: "Branding is one of the most important ingredients for the success of any business.",
+    title: "Brand Identity",
+    desc: "Logo systems, visual language, and print collateral built to last. Delivering marks that feel native to the brand.",
     icon: s_2,
   },
   {
     id: 2,
-    title: "Website design",
-    desc: "The perfect cocktail should still look and taste perfect no matter the size of the glass you serve it in.",
+    title: "Web & UI",
+    desc: "Responsive web experiences and UI design grounded in craft. From Figma concepts to shipped React frontends.",
     icon: s_1,
   },
   {
     id: 3,
-    title: "Marketing",
-    desc: "We take that same approach with the apps & websites we create. you go there because of the overall experience.",
+    title: "Motion Design",
+    desc: "From title sequences to full campaign films — I concept, direct, and deliver motion work across industry tools.",
     icon: s_3,
   },
 ];
@@ -64,8 +64,8 @@ export default function ServiceFive() {
                   SERVICES
                 </span>
                 <span className="text-space"></span>
-                Nullam posuere rhoncus elementum. Nullam lacinia <br />
-                urna blandit iaculis sagittis
+                Creative direction and technical <br />
+                execution built to move your audience.
               </h4>
             </div>
           </div>

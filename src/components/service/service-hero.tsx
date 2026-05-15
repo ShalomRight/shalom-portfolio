@@ -13,10 +13,10 @@ export default function ServiceHero() {
           <div className="col-xl-10">
             <div className="sv-hero-title-box">
               <h4 className="sv-hero-title tp-char-animation">
-                Experience <br /> the best services.
+                Designed to move. <br /> Built to last.
               </h4>
               <p className="tp_fade_bottom">
-                Fulfilled direction use continual set him propriety continued.
+                Delivering high-end visual systems and digital experiences from concept to shipped product.
               </p>
             </div>
           </div>
