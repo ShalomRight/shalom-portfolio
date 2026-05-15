@@ -1,0 +1,173 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.1 Header Style 3
+/*----------------------------------------*/
+
+.tp-header-3{
+    &-area{
+        // Fixed position so the header stays above ScrollSmoother's
+        // #smooth-wrapper stacking context and doesn't scroll away.
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 999 !important; // above smooth-wrapper and all page content
+        // Remove the mt-35 margin — meaningless on a fixed element
+        margin-top: 0 !important;
+
+        &.header-sticky{
+            &::after{
+                backdrop-filter: initial;
+            }
+            box-shadow: none;
+            background: none;
+        }
+    }
+    &-menu-box{
+        display: inline-block;
+        padding: 0px 15px;
+        padding-right: 30px;
+        @at-root{
+            // .menu-bg was designed for a pill-shaped nav container
+            // (.tp-header-3-menu-box) that no longer exists in the markup.
+            // Without that parent context it escapes and overlays the nav
+            // as an opaque dark block, causing the 'faded' appearance.
+            // Hide it completely.
+            .menu-bg{
+                display: none !important;
+            }
+        }
+    }
+    &-bar{
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-align: center;
+        display: inline-block;
+        color: var(--tp-common-black);
+        border: 1px solid var(--tp-common-black);
+        transition: .3s;
+        margin-left: 15px;
+        border-radius: 50%;
+        &:hover{
+            background-color: var(--tp-common-black);
+            color: var(--tp-common-white);
+        }
+    }
+    &-menu{
+        & > nav{
+            & > ul{
+                & > li{
+                    list-style: none;
+                    display: inline-block;
+                    margin: 0px 15px;
+                    & > a{
+                        font-size: 17px;
+                        font-weight: 500;
+                        padding: 12px 0;
+                        transition: .3s;
+                        display: inline-block;
+                        color: var(--tp-common-white);
+                        & span{
+                            margin-left: 5px;
+                        }
+                    }
+                    &:hover{
+                        color: var(--tp-common-white);
+                    }
+                }
+            }
+        }
+    }
+    &-cart{
+        & button{
+            & span{
+                margin-left: 7px;
+                display: inline-block;
+            }
+            & em{
+                position: absolute;
+                right: -12px;
+                top: -1px;
+                color: var(--tp-common-black);
+                font-size: 18px;
+                font-weight: 400;
+                height: 18px;
+                width: 18px;
+                line-height: 16px;
+                border-radius: 50%;
+                text-align: center;
+                background-color: var(--tp-common-white);
+                font-style: normal;
+            }
+        }
+    }
+    &-social{
+        & a{
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            font-size: 16px;
+            text-align: center;
+            display: inline-block;
+            background-color: var(--tp-grey-2);
+            color: var(--tp-common-black);
+            margin-left: 7px;
+            transition: .3s;
+            &:hover{
+                background-color: var(--tp-common-black);
+                color: var(--tp-common-white);
+            }
+        }
+    }
+}
+
+// Shalom.js brand name text mark
+.tp-header-brand-name {
+    font-family: var(--tp-ff-syne);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--tp-common-white);
+    text-decoration: none;
+    line-height: 1;
+    display: inline-block;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.7;
+        color: var(--tp-common-white);
+    }
+}
+
+// Sticky state — logo and right section already visible since header is fixed
+// These overrides ensure they don't hide on scroll (the original template
+// hid them, but our fixed header should always show all elements)
+.tp-header-3-area.header-sticky {
+    .tp-header-3-logo {
+        display: block !important;
+    }
+    .tp-header-3-right {
+        display: flex !important;
+    }
+}
+
+// Active nav link state
+.tp-header-3-menu > nav > ul > li.active > a,
+.tp-main-menu-content > ul > li.active > a {
+    opacity: 1;
+    font-weight: 600;
+}
+
+// Compensate for the fixed header height so page content
+// starts below the header instead of being hidden behind it.
+// HeaderFour sits at ~75px tall.
+#smooth-wrapper,
+.tm-hero-area:first-child,
+.project-details-2-area:first-child {
+    padding-top: 75px;
+}
