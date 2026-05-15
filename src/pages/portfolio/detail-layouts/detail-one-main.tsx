@@ -28,6 +28,10 @@ type Props = { project: PortfolioProject };
  *   project.outcome        → meta row "Outcome"
  */
 export default function DetailOneMain({ project }: Props) {
+  // Guard: this file lives in /pages/ so Next.js tries to prerender it as a
+  // standalone route. When rendered without props, bail out gracefully.
+  if (!project) return null;
+
   // ── Field extraction ─────────────────────────────────────────
   const gallery     = "gallery"     in project ? project.gallery     : [];
   const description = "description" in project ? project.description : undefined;

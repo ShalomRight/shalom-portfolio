@@ -11,6 +11,9 @@ type Props = { project: PortfolioProject };
  * Shows: full-width hero video, brief, supporting gallery stills, outcome.
  */
 export default function DetailVideoMain({ project }: Props) {
+  // Guard: this file lives in /pages/ so Next.js tries to prerender it as a
+  // standalone route. When rendered without props, bail out gracefully.
+  if (!project) return null;
   const p = project as DeepProject;
 
   return (

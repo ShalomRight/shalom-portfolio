@@ -23,6 +23,9 @@ type Props = { project: PortfolioProject };
  *   "detail-two"      → Many images + carousel (app screens)
  */
 export default function WorkDetailMain({ project }: Props) {
+  // Guard: this file lives in /pages/ so Next.js tries to prerender it as a
+  // standalone route. When rendered without props, bail out gracefully.
+  if (!project) return null;
   const layout: DetailPageLayout =
     project.detailPageLayout ?? (project.detailLevel === "deep" ? "detail-tree" : "showcase-detail");
 

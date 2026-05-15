@@ -11,6 +11,9 @@ type Props = { project: PortfolioProject };
  * Shows: large hero image, tagline, description, gallery masonry, outcome.
  */
 export default function ShowcaseDetailMain({ project }: Props) {
+  // Guard: this file lives in /pages/ so Next.js tries to prerender it as a
+  // standalone route. When rendered without props, bail out gracefully.
+  if (!project) return null;
   const description = "description" in project ? project.description : null;
   const outcome = "outcome" in project ? project.outcome : null;
   const gallery = "gallery" in project ? project.gallery : [];

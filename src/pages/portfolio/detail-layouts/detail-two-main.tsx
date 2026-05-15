@@ -11,6 +11,9 @@ type Props = { project: PortfolioProject };
  * Shows: hero, brief, scrollable image carousel, outcome.
  */
 export default function DetailTwoMain({ project }: Props) {
+  // Guard: this file lives in /pages/ so Next.js tries to prerender it as a
+  // standalone route. When rendered without props, bail out gracefully.
+  if (!project) return null;
   const p = project as DeepProject;
   const validGallery = p.gallery?.filter(g => g.src !== "PENDING") ?? [];
   const [current, setCurrent] = useState(0);
