@@ -49,38 +49,38 @@ const service_data = [
   {
     id: 1,
     icon: sv_1,
-    title: "Website design",
-    subtitle: "You’re ready to take your business to higher ground.",
+    title: "Brand Identity",
+    subtitle: "Logo systems, visual language, and print collateral built to last.",
   },
   {
     id: 2,
     icon: sv_2,
-    title: "Web development",
-    subtitle: "You’re ready to take your business to higher ground.",
+    title: "Web & UI",
+    subtitle: "Responsive web experiences and UI design grounded in craft.",
   },
   {
     id: 3,
     icon: sv_3,
-    title: "UI/UX Design",
-    subtitle: "You’re ready to take your business to higher ground.",
+    title: "Motion Design",
+    subtitle: "From title sequences to full campaign films — concept to delivery.",
   },
   {
     id: 4,
     icon: sv_4,
-    title: "Growth",
-    subtitle: "You’re ready to take your business to higher ground.",
+    title: "Art Direction",
+    subtitle: "Creative direction and technical execution built to move your audience.",
   },
   {
     id: 5,
     icon: sv_2,
-    title: "App development",
-    subtitle: "You’re ready to take your business to higher ground.",
+    title: "Creative Strategy",
+    subtitle: "Strategic thinking to elevate your brand positioning and visual story.",
   },
   {
     id: 6,
     icon: sv_4,
-    title: "Marketing",
-    subtitle: "You’re ready to take your business to higher ground.",
+    title: "Digital Products",
+    subtitle: "High-fidelity Figma concepts shipped as scalable React frontends.",
   },
 ];
 export default function ServiceThree() {
@@ -96,8 +96,7 @@ export default function ServiceThree() {
             <div className="col-xl-9 col-lg-9 col-md-9">
               <div className="tp-service-4-title-box tp_fade_bottom">
                 <h4 className="tp-service-4-title">
-                  We work with select service providers in the disability sector
-                  to develop inclusive products tailored to their needs.
+                  Delivering high-end visual systems and digital experiences from concept to shipped product.
                 </h4>
               </div>
             </div>
