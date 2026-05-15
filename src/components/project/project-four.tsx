@@ -3,20 +3,20 @@ import Image from "next/image";
 import { ProjectShape, RightArrow } from "../svg";
 import Link from "next/link";
 
-// portfolio data: img_1 = hero image, img_2 = thumbnail image
+// portfolio data: img_1 = heroMedia, img_2 = thumbnail (exact Contentful field values)
 const project_data = [
   {
     id: 1,
-    // Paradise — hero (event layout shot) + thumbnail (fragrance bottle)
-    img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/1IQA53NPyiwUBWVbZ9dkYa/fc2c97836436e335309583d268d121af/Paradise_Layout.jpg",
-    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/6TRG5LtSkISLTvvELouG5I/980224218e38f36b7a39f94e11f2c03c/Fragrance.jpeg",
+    // Paradise — heroMedia + thumbnail from Contentful
+    img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/11JaMqxnAoyY8UVbcUtsTt/ec3f9a2bc299c4b449da837e97682754/Screenshot_2026-05-10_at_7.00.55%C3%A2__AM.png",
+    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/7faHBdMyOl4uyqWBJvqXOZ/c4cc697fa9df1393ab6ff2dee7a00eec/Screenshot_2026-05-10_at_7.00.55%C3%A2__AM.png",
     meta: "2024 · Motion",
     title: "Paradise",
     slug: "kimya-glasgow-paradise",
   },
   {
     id: 2,
-    // Mutiny — hero (cover 1920x1080) + thumbnail (cover square 1080x1080)
+    // Mutiny — heroMedia (cover wide) + thumbnail (cover square)
     img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/Xl5N6Eo3wjNGL3zjXcw4J/f9a649b88c6ab1e5840e20572428d55d/Mutiny_Cover.jpg",
     img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/57NeZPrwGyuW6twZzUb4vt/10605f0e76c60113c90f0b34b4c3b52d/Mutiny_Cover_thumnails.jpg",
     meta: "2026 · Motion",
@@ -25,9 +25,9 @@ const project_data = [
   },
   {
     id: 3,
-    // Botanical — hero (product 3D shot) + thumbnail (social post)
-    img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/1QBGyaaq1sfnbEpfcy0YAM/209b27eb2aa57c41be0162818db73109/03_Botanical_-_Carrot_Oil.png",
-    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/6PLo4B8wsTX5KqnW6OKwqk/805520ceed65acfe295e3200ccf8684f/Botanical_Social_Media_Post_-_Price_List_01.jpg",
+    // Botanical — heroMedia + thumbnail from Contentful
+    img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/2VRfWLkcAuMJ7sCW4iKz6Y/a77b2f82dbb26383f7fea206e93c0e72/a04b84bb73424b42b339186ceac42fb2.png",
+    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/2VRfWLkcAuMJ7sCW4iKz6Y/a77b2f82dbb26383f7fea206e93c0e72/a04b84bb73424b42b339186ceac42fb2.png",
     meta: "2024 · Branding",
     title: "Botanical",
     slug: "botanical-social",
