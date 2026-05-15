@@ -13,12 +13,18 @@ import shape_d_2 from '@/assets/img/home-03/gallery/gal-shape-dark-2.png';
  * The marquee auto-loops so add as many as needed.
  */
 const GALLERY_IMAGES: { src: string; label: string }[] = [
-  { src: "PENDING", label: "Paradise" },
-  { src: "PENDING", label: "Kimya Glasgow Sustainability" },
-  { src: "PENDING", label: "Botanical" },
-  { src: "PENDING", label: "The Reef Brand" },
-  { src: "PENDING", label: "Lots of Lobster" },
-  { src: "PENDING", label: "Mutiny on the Reef" },
+  // Paradise — KG fragrance launch
+  { src: "https://images.ctfassets.net/d1rzkrhwv5ps/1IQA53NPyiwUBWVbZ9dkYa/fc2c97836436e335309583d268d121af/Paradise_Layout.jpg", label: "Paradise" },
+  // Kimya Glasgow Sustainability — fashion carousel
+  { src: "https://images.ctfassets.net/d1rzkrhwv5ps/3nPBkCWFek2JNHHLmkMA3c/7d5922bac14e3d6801b964856ecdae50/Interview.jpg", label: "Kimya Glasgow Sustainability" },
+  // Botanical — 3D product visuals
+  { src: "https://images.ctfassets.net/d1rzkrhwv5ps/1QBGyaaq1sfnbEpfcy0YAM/209b27eb2aa57c41be0162818db73109/03_Botanical_-_Carrot_Oil.png", label: "Botanical" },
+  // The Reef Brand — identity / menu design
+  { src: "https://images.ctfassets.net/d1rzkrhwv5ps/6sMOEQWdzrmOZ5rsabOViI/49d8574c1421d528834855398b88c1a7/DE_REEF_MAIN_MENU_LETTER_SIZE_UPDATED.jpg", label: "The Reef Brand" },
+  // Lots of Lobster — event identity
+  { src: "https://images.ctfassets.net/d1rzkrhwv5ps/5rr4e2tUxw4Go6EOPeHF9p/893da2b30d85e0e7a0804e48c6cf77ec/Lol_Cover.png", label: "Lots of Lobster" },
+  // Mutiny on the Reef — campaign
+  { src: "https://images.ctfassets.net/d1rzkrhwv5ps/Xl5N6Eo3wjNGL3zjXcw4J/f9a649b88c6ab1e5840e20572428d55d/Mutiny_Cover.jpg", label: "Mutiny on the Reef" },
 ];
 
 // Duplicate for a full seamless loop

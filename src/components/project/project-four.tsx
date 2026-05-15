@@ -1,39 +1,33 @@
 import React from "react";
 import Image from "next/image";
-
 import { ProjectShape, RightArrow } from "../svg";
-// original stock images — keep until real project media is uploaded
-import port_1 from "@/assets/img/home-03/portfolio/port-1.jpg";
-import port_2 from "@/assets/img/home-03/portfolio/port-2.jpg";
-import port_3 from "@/assets/img/home-03/portfolio/port-3.jpg";
-import port_4 from "@/assets/img/home-03/portfolio/port-4.jpg";
-import port_5 from "@/assets/img/home-03/portfolio/port-5.jpg";
-import port_6 from "@/assets/img/home-03/portfolio/port-6.jpg";
 import Link from "next/link";
 
-// portfolio data — updated to real projects with correct slugs
-// TODO: replace img_1 / img_2 with real Contentful image URLs when media is uploaded
+// portfolio data: img_1 = hero image, img_2 = thumbnail image
 const project_data = [
   {
     id: 1,
-    img_1: port_1,
-    img_2: port_2,
+    // Paradise — hero (event layout shot) + thumbnail (fragrance bottle)
+    img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/1IQA53NPyiwUBWVbZ9dkYa/fc2c97836436e335309583d268d121af/Paradise_Layout.jpg",
+    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/6TRG5LtSkISLTvvELouG5I/980224218e38f36b7a39f94e11f2c03c/Fragrance.jpeg",
     meta: "2024 · Motion",
     title: "Paradise",
     slug: "kimya-glasgow-paradise",
   },
   {
     id: 2,
-    img_1: port_3,
-    img_2: port_4,
+    // Mutiny — hero (cover 1920x1080) + thumbnail (cover square 1080x1080)
+    img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/Xl5N6Eo3wjNGL3zjXcw4J/f9a649b88c6ab1e5840e20572428d55d/Mutiny_Cover.jpg",
+    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/57NeZPrwGyuW6twZzUb4vt/10605f0e76c60113c90f0b34b4c3b52d/Mutiny_Cover_thumnails.jpg",
     meta: "2026 · Motion",
     title: "Mutiny on the Reef",
     slug: "mutiny-on-the-reef",
   },
   {
     id: 3,
-    img_1: port_5,
-    img_2: port_6,
+    // Botanical — hero (product 3D shot) + thumbnail (social post)
+    img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/1QBGyaaq1sfnbEpfcy0YAM/209b27eb2aa57c41be0162818db73109/03_Botanical_-_Carrot_Oil.png",
+    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/6PLo4B8wsTX5KqnW6OKwqk/805520ceed65acfe295e3200ccf8684f/Botanical_Social_Media_Post_-_Price_List_01.jpg",
     meta: "2024 · Branding",
     title: "Botanical",
     slug: "botanical-social",
@@ -82,7 +76,10 @@ export default function ProjectFour({ style_2 = false }: IProps) {
                       <Image
                         src={item.img_1}
                         alt={item.title}
-                        style={{ height: "auto" }}
+                        width={0}
+                        height={0}
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        style={{ width: "100%", height: "auto" }}
                       />
                     </div>
                   </div>
@@ -107,8 +104,11 @@ export default function ProjectFour({ style_2 = false }: IProps) {
                     <div className="tp-project-3-thumb pro-img-2">
                       <Image
                         src={item.img_2}
-                        alt={`${item.title} — gallery`}
-                        style={{ height: "auto" }}
+                        alt={`${item.title} — thumbnail`}
+                        width={0}
+                        height={0}
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        style={{ width: "100%", height: "auto" }}
                       />
                     </div>
                   </div>
