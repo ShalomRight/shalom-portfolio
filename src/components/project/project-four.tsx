@@ -9,7 +9,7 @@ const project_data = [
     id: 1,
     // Paradise — heroMedia + thumbnail from Contentful
     img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/11JaMqxnAoyY8UVbcUtsTt/ec3f9a2bc299c4b449da837e97682754/Screenshot_2026-05-10_at_7.00.55%C3%A2__AM.png",
-    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/7faHBdMyOl4uyqWBJvqXOZ/c4cc697fa9df1393ab6ff2dee7a00eec/Screenshot_2026-05-10_at_7.00.55%C3%A2__AM.png",
+    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/2Q57H8hmG7XFaf7Sxf5qZk/2a4b70aa30b037aa9352393588d3b678/ladies_2.jpg",
     meta: "2024 · Motion",
     title: "Paradise",
     slug: "kimya-glasgow-paradise",
@@ -18,7 +18,7 @@ const project_data = [
     id: 2,
     // Mutiny — heroMedia (cover wide) + thumbnail (cover square)
     img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/Xl5N6Eo3wjNGL3zjXcw4J/f9a649b88c6ab1e5840e20572428d55d/Mutiny_Cover.jpg",
-    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/57NeZPrwGyuW6twZzUb4vt/10605f0e76c60113c90f0b34b4c3b52d/Mutiny_Cover_thumnails.jpg",
+    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/2ETjJxLdcb4yaPa5XE3D45/5eca02ba37dfdbd4645b1505b0685101/Mutiny_-_Cover.jpg",
     meta: "2026 · Motion",
     title: "Mutiny on the Reef",
     slug: "mutiny-on-the-reef",
@@ -27,7 +27,7 @@ const project_data = [
     id: 3,
     // Botanical — heroMedia + thumbnail from Contentful
     img_1: "https://images.ctfassets.net/d1rzkrhwv5ps/2VRfWLkcAuMJ7sCW4iKz6Y/a77b2f82dbb26383f7fea206e93c0e72/a04b84bb73424b42b339186ceac42fb2.png",
-    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/2VRfWLkcAuMJ7sCW4iKz6Y/a77b2f82dbb26383f7fea206e93c0e72/a04b84bb73424b42b339186ceac42fb2.png",
+    img_2: "https://images.ctfassets.net/d1rzkrhwv5ps/5fNlvTOdoZCRdoA0GTPNXW/2a98a16492c4234ea11bb45f16eadd64/End_Shot.png",
     meta: "2024 · Branding",
     title: "Botanical",
     slug: "botanical-social",

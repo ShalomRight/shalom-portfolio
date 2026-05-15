@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 // image
-import ser_hero from "@/assets/img/inner-service/hero/hero-1.jpg";
+const ser_hero = "https://images.ctfassets.net/d1rzkrhwv5ps/4Q2UOr9bQX1v4V8OjTP7yk/a77be2180e17ac7f6a3d15650f7ee201/Screenshot_2026-05-10_at_4.33.44%C3%A2__PM.png";
 import ser_hero_shape from "@/assets/img/inner-service/hero/hero-shape-1.jpg";
 
 export default function ServiceHero() {
@@ -29,7 +29,9 @@ export default function ServiceHero() {
                   data-speed=".7"
                   src={ser_hero}
                   alt="ser_hero-img"
-                  style={{height:"auto"}}
+                  width={1200}
+                  height={800}
+                  style={{ width: "100%", height: "auto", objectFit: "cover" }}
                 />
               </div>
               <Image
