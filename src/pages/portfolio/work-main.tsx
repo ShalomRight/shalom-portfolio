@@ -118,22 +118,7 @@ const WorkMain = ({ projects }: Props) => {
                 ))}
               </div>
 
-              {/* Logos CTA */}
-              <div
-                className="tp-work-subcategory-cta mt-80 pt-60"
-                style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
-              >
-                <p
-                  className="mb-20"
-                  style={{ opacity: 0.5, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.1em" }}
-                >
-                  Also available
-                </p>
-                <div className="d-flex flex-wrap gap-3">
-                  <Link href="/work/logos" className="tp-portfolio-filter-btn">Logo Archive →</Link>
-                  <Link href="/work/motion" className="tp-portfolio-filter-btn">Motion Archive →</Link>
-                </div>
-              </div>
+
             </div>
           </main>
           <FooterFour />
