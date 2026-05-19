@@ -102,13 +102,14 @@ export function MediaBlock({
   if (!asset || asset.src === "PENDING") return null;
 
   if (asset.type === "video") {
-    const ratio = asset.aspectRatio ?? "16/9";
+    const ratio = asset.aspectRatio;
     return (
       <div
         style={{
-          aspectRatio: ratio,
+          aspectRatio: ratio, // if undefined, it won't force a ratio
           background: "#0d0d0d",
           position: "relative",
+          width: "100%",
           overflow: "hidden",
           willChange: "transform",
         }}
@@ -118,8 +119,14 @@ export function MediaBlock({
           poster={asset.poster && asset.poster !== "PENDING" ? asset.poster : undefined}
           controls
           playsInline
-          preload="metadata"   // load only duration/poster — not full video
-          style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          preload="metadata"
+          style={{ 
+            width: "100%", 
+            height: ratio ? "100%" : "auto", 
+            maxHeight: "100vh", 
+            objectFit: "contain", 
+            display: "block" 
+          }}
         />
         {asset.caption && (
           <p style={{ opacity: 0.5, fontSize: "0.8rem", marginTop: "0.5rem", padding: "0 0.25rem" }}>

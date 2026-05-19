@@ -1,5 +1,4 @@
 import React from 'react';
-import { RightArrow, SvgBgSm } from '@/components/svg';
 import Link from 'next/link';
 
 export default function FooterFour() {
@@ -10,7 +9,7 @@ export default function FooterFour() {
           <div className="row">
             <div className="col-xl-4 col-lg-6 col-md-6 mb-60">
               <div className="tp-footer-3-widget-wrapper footer-col-3-1">
-                <div className="tp-footer-3-widget mb-40">
+                <div className="tp-footer-3-widget">
                   <h4 className="tp-footer-3-title">Website map</h4>
                   <div className="tp-footer-3-menu">
                     <ul>
@@ -19,20 +18,6 @@ export default function FooterFour() {
                       <li><a href="/about-me">About</a></li>
                       <li><a href="/contact">Contact</a></li>
                     </ul>
-                  </div>
-                </div>
-                <div className="tp-footer-3-widget">
-                  <h4 className="tp-footer-3-title">Newsletter</h4>
-                  <div className="tp-footer-3-input-box d-flex align-items-center">
-                    <input type="text" placeholder="Enter Address..." />
-                    <button className="tp-footer-3-btn p-relative">
-                      <span className="icon-1">
-                        <RightArrow clr='#19191A' />
-                      </span>
-                      <span className="icon-2">
-                        <SvgBgSm/>
-                      </span>
-                    </button>
                   </div>
                 </div>
               </div>

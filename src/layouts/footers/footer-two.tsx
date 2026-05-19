@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { RightArrow } from "@/components/svg";
 
 // prop type
 type IProps = {
@@ -18,21 +17,7 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
       >
         <div className="container container-1480">
           <div className="row">
-            <div className="col-xl-3 col-lg-4 col-md-6 mb-50">
-              <div className="tp-footer-2-widget footer-col-2-1">
-                <div className="tp-footer-2-widget-logo">
-                  <Link className="tp-header-brand-name" href="/">
-                    Shalom.js
-                  </Link>
-                </div>
-                <div className="tp-footer-2-widget-text">
-                  <p>
-                    Motion, brand, and digital — <br /> based in Saint Vincent.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-3 col-md-6 mb-50">
+            <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-2">
                 <div className="tp-footer-2-widget-menu">
                   <h4 className="tp-footer-2-widget-title">Sitemap</h4>
@@ -45,7 +30,21 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
                 </div>
               </div>
             </div>
-            <div className="col-xl-3 col-lg-5 col-md-6 mb-50">
+            <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div className="tp-footer-2-widget text-md-center footer-col-2-1">
+                <div className="tp-footer-2-widget-logo">
+                  <Link className="tp-header-brand-name" href="/">
+                    Shalom.js
+                  </Link>
+                </div>
+                <div className="tp-footer-2-widget-text">
+                  <p>
+                    Motion, brand, and digital — <br /> based in Saint Vincent.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-3">
                 <h4 className="tp-footer-2-widget-title">Contact</h4>
                 <div className="tp-footer-2-contact-item">
@@ -63,23 +62,7 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-5 col-md-6 mb-50">
-              <div className="tp-footer-2-widget footer-col-2-4">
-                <div className="tp-footer-2-widget-newslatter">
-                  <h4 className="tp-footer-2-widget-title">
-                    Subscribe to our newsletter
-                  </h4>
-                  <form action="#">
-                    <div className="tp-footer-2-input p-relative">
-                      <input type="text" placeholder="Enter your email..." />
-                      <button>
-                        <RightArrow clr={whiteFooter?"currentcolor":'#F3F3F4'}/>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

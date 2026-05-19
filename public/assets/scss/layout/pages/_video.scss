@@ -116,17 +116,15 @@
     &-wrap{
         line-height: 0;
         overflow: hidden;
+        background: #000;
+        display: flex;
+        justify-content: center;
         & video{
-            height: 920px;
+            height: auto;
             width: 100%;
-            object-fit: cover;
+            max-height: 100vh;
+            object-fit: contain;
             overflow: hidden;
-            @media #{$xl,$lg}{
-                height: 700px;
-            }
-            @media #{$md,$xs}{
-                height: 600px;
-            }
         } 
     }
 }
