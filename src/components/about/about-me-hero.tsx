@@ -33,7 +33,7 @@ export default function AboutMeHero() {
                 >
                   Shalom<br/>Sutherland 
                 </h6>
-                <a className="tp-btn-white background-black" href="https://drive.google.com/file/d/1NYaoI5-iKP43WM88J2AEh2x9gH6AGT30/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a className="tp-btn-white background-black" href="https://drive.google.com/file/d/1pvHz7yoHLOycgVlCeMZEGAH7zoziYqdm/view?usp=share_link" target="_blank" rel="noopener noreferrer">
                   Download CV
                   <span>
                     <Leaf />
